@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float jumpForce = 4f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -21,6 +24,16 @@ public class PlayerScript : MonoBehaviour
 
         rb.velocity = new Vector3(rb.velocity.x,rb.velocity.y,playerMoveSpeed* horizontalInput);
 
+        animator.SetFloat("MoveSpeed", playerMoveSpeed*horizontalInput);
+
+        if (isGrounded())
+        {
+            animator.SetBool("Grounded", true);
+        }
+        else
+        {
+            animator.SetBool("Grounded", false);
+        }
         if (Input.GetKey(KeyCode.Space) && isGrounded())
         {
             jump();
@@ -48,7 +61,8 @@ public class PlayerScript : MonoBehaviour
     }
     public void playerDied()
     {
-        transform.position = new Vector3(0, 1, 0);
+        //transform.position = new Vector3(0, 1, 0);
+        SceneManager.LoadScene("SampleScene");
     }
     public void jump()
     {
