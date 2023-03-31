@@ -17,12 +17,11 @@ public class EnemyShoot : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
-        yield return new WaitForSeconds(5);
-        StartCoroutine(Shoot());
-    }
-    bool ifGoingRight()
-    {
-        return currentxPosition < transform.position.x;
+       while (true)
+        {
+            bullet =  Instantiate(bullet, transform.position, transform.rotation);
+            yield return new WaitForSeconds(5);
+        }
+       
     }
 }
