@@ -8,6 +8,7 @@ public class Mario_continue : MonoBehaviour
     public void nextScene(string name)
     {
         Debug.Log("next scene " + name);
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(name
+            );
     }
 }
