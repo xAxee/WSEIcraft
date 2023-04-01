@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class test : MonoBehaviour
 {
     public void loadNext() {
+        Debug.Log("next");
         SceneManager.LoadScene("MarioGuide2");
     }
 }

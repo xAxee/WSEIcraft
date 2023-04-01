@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Guide/MarioGuide2.unity
     guid: ecade9362fff8094d9c65672c1b797ea
+  - enabled: 1
+    path: Assets/Mario/MarioScene.unity
+    guid: 7552edba95528634cb7d102a30d9bde3
   m_configObjects: {}
