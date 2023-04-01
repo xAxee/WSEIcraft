@@ -62,7 +62,7 @@ public class PlayerScript : MonoBehaviour
     public void playerDied()
     {
         //transform.position = new Vector3(0, 1, 0);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Mario");
     }
     public void jump()
     {
