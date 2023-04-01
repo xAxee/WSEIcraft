@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6096987567695496183}
-  - component: {fileID: 6096987567695496180}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TopPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,19 +31,6 @@ Transform:
   m_Father: {fileID: 2237760027951035719}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6096987567695496180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6096987567695496182}
-  m_Material: {fileID: 13400000, guid: 6ab4d6fbe9c2efd4f927f8301dbcb0c2, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.479299, y: 0.20418549, z: 0.50594807}
-  m_Center: {x: -0.043935567, y: 0.9418559, z: 0.00385046}
 --- !u!1 &6096987568711677575
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,9 +73,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6096987568718124067}
-  - component: {fileID: 6096987568718124065}
   - component: {fileID: 6096987568718124064}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TopPipe
   m_TagString: TopTube
   m_Icon: {fileID: 0}
@@ -111,19 +96,6 @@ Transform:
   m_Father: {fileID: 2237760028321476484}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6096987568718124065
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6096987568718124066}
-  m_Material: {fileID: 13400000, guid: 6ab4d6fbe9c2efd4f927f8301dbcb0c2, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.479299, y: 0.20418549, z: 0.50594807}
-  m_Center: {x: -0.043935567, y: 0.9418559, z: 0.00385046}
 --- !u!114 &6096987568718124064
 MonoBehaviour:
   m_ObjectHideFlags: 0
