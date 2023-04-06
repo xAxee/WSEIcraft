@@ -3,16 +3,16 @@
 
 ### Screenshots
 
-**MENU**
+**MENU**<br/>
 ![zdjecie menu](Screenshots/01.png)
 
-**NOTES TO COLLECT**
+**NOTES TO COLLECT**<br/>
 ![zdjecie notatek](Screenshots/02.png)
 
-**MARIO**
+**MARIO**<br/>
 ![zdjecie mario](Screenshots/03.png)
 
-**TETRIS**
+**TETRIS**<br/>
 ![zdjecie tetris](Screenshots/04.png)
 
 ### Credits
