@@ -1,6 +1,9 @@
 # CrashPast
 *Game created on a 20Hour 7th WSEI GameJam with "nostalgia" theme.*
 
+### GAME PURPOSE
+//todo
+
 ### Screenshots
 
 **MENU**<br/>
