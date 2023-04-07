@@ -22,6 +22,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private AudioSource bgMusic;
     [SerializeField] private TextMeshProUGUI notesLeftText;
     [SerializeField] private GameObject finalClipboard;
+    [SerializeField] private GameObject easterEggMushroom;
     
     private PlayerUI playerUI;
     
@@ -40,7 +41,7 @@ public class FirstPersonController : MonoBehaviour
     private int notesLeft;
     
     private ImageFrameActions interaction;
-    private string dataToSave;
+    private string dataToSave = "";
 
 
     private void LoadState()
@@ -52,9 +53,14 @@ public class FirstPersonController : MonoBehaviour
             Debug.Log(singleNote.name);
             foreach (var noteName in data)
             {
+                dataToSave += noteName+"|";
                 if (singleNote.name == noteName)
                 {
                     singleNote.SetActive(false);
+                }
+                else if (noteName == "EasterEggMushroom")
+                {
+                    easterEggMushroom.SetActive(false);
                 }
             }
         }
@@ -83,10 +89,15 @@ public class FirstPersonController : MonoBehaviour
             if (singleNote.activeSelf) notesLeft++;
         }
 
-        notesLeftText.SetText("notes left: " + notesLeft);
-        if (notesLeft == 0)
+        
+        if (notesLeft <= 0)
         {
+            notesLeftText.SetText("FINAL NOTE UNLOCKED!");
             finalClipboard.SetActive(true);
+        }
+        else
+        {
+            notesLeftText.SetText("notes left: " + notesLeft);
         }
     }
     private void Update()
@@ -132,10 +143,10 @@ public class FirstPersonController : MonoBehaviour
                         isPlayerFreezed = true;
                         notesLeftText.SetText(string.Empty);
                         notesLeft -= 1;
-                        dataToSave += interaction.name+"|";
                         Debug.Log("Added: "+interaction.name);
                         if (notesLeft <= 0)
                         {
+                            notesLeftText.SetText("FINAL NOTE UNLOCKED!");
                             finalClipboard.SetActive(true);
                         }
                     }
@@ -147,6 +158,8 @@ public class FirstPersonController : MonoBehaviour
                         moveSpeed = defaultMoveSpeed;
                         playerCamera.fieldOfView = 90;
                     }
+                    Debug.Log("collected: "+interaction.name);
+                    dataToSave += interaction.name+"|";
                     interaction.BaseInteract();
                 }
             }
