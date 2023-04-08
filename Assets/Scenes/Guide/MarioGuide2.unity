@@ -609,6 +609,8 @@ MonoBehaviour:
   time: 0.25
   text: Continue >>>
   loop: 0
+  hide: 0
+  fadeOut: 1
 --- !u!1 &904646648
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +623,7 @@ GameObject:
   - component: {fileID: 904646651}
   - component: {fileID: 904646650}
   m_Layer: 5
-  m_Name: Mission
+  m_Name: Task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,7 +669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mission
+  m_text: 'Task:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e76cfd3ad808e6c44970e0dfee839348, type: 2}
   m_sharedMaterial: {fileID: -7250962458157741679, guid: e76cfd3ad808e6c44970e0dfee839348,
